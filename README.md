@@ -25,13 +25,13 @@ Install LaTeX distribution and required tools:
 ### macOS
 
 ```bash
-# Install MacTeX (full LaTeX distribution)
+# Install MacTeX (full LaTeX distribution) - recommended
 brew install --cask mactex
 
 # Or install BasicTeX (smaller, ~100MB)
 brew install --cask basictex
 # Then install required packages
-tlmgr install latexmk fontspec fontawesome5 smartdiogram
+tlmgr install latexmk fontspec fontawesome smartdiagram textpos biblatex biber xstring
 
 # Install Ghostscript for PDF optimization
 brew install ghostscript
@@ -41,9 +41,36 @@ brew install ghostscript
 
 ```bash
 sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-latex-extra ghostscript
+# textpos is included in texlive-latex-extra
 ```
 
 ## Building the CV
+
+### Quick Start (Recommended)
+
+```bash
+# Install all required packages (macOS)
+make install
+
+# Build cv_2026.tex
+make build
+
+# View available commands
+make help
+```
+
+### Using Build Script
+
+```bash
+# Build cv_2026.tex (default)
+./scripts/build.sh
+
+# Build specific file
+./scripts/build.sh cv
+
+# Build and clean auxiliary files
+./scripts/build.sh cv_2026 clean
+```
 
 ### Quick Build
 
@@ -52,21 +79,48 @@ cd Dung_Huynh
 xelatex cv.tex
 ```
 
-### Using latexmk (Recommended)
+### Build All Variants
 
 ```bash
-cd Dung_Huynh
-latexmk -xelatex cv.tex
-```
-
-### Build all variants
-
-```bash
-# Main CV
+# Main CV (original)
 xelatex Dung_Huynh/cv.tex
+
+# Updated 2026 version
+./scripts/build.sh cv_2026
 
 # AI Lead version
 xelatex Dung_Huynh/cv_ai_lead.tex
+```
+
+### Using Makefile
+
+```bash
+# Install all required packages (macOS)
+make install
+
+# Check if requirements are met
+make check
+
+# Build cv_2026.tex (default)
+make build
+
+# Build all CV files
+make build-all
+
+# Optimize PDF for size
+make optimize
+
+# Clean auxiliary files
+make clean
+
+# Remove all generated files
+make clean-all
+
+# View PDF in default viewer
+make view
+
+# Show all available commands
+make help
 ```
 
 ## PDF Optimization
@@ -152,6 +206,16 @@ To change fonts, modify the fontspec configuration in your `.tex` file.
 ## Troubleshooting
 
 ### Compilation Errors
+
+**Error: `File 'textpos.sty' not found`**
+
+```bash
+# macOS
+tlmgr install textpos biblatex biber xstring
+
+# Linux
+sudo apt-get install texlive-latex-extra biber
+```
 
 **Error: `fontspec` feature requires XeLaTeX or LuaLaTeX**
 
