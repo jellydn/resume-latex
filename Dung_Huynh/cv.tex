@@ -1,0 +1,195 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+% if you want to add fontawesome package
+% you need to compile the tex file with LuaLaTeX
+% References:
+%   http://texdoc.net/texmf-dist/doc/latex/fontawesome/fontawesome.pdf
+%   https://www.ctan.org/tex-archive/fonts/fontawesome?lang=en
+\usepackage{fontawesome}
+\usepackage{metalogo}
+\usepackage{dtklogos}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.5cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.5cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.5cm,
+    % set center bubble color
+    bubble center node color = pblue,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.6,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 0.5,
+}
+
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{Huynh Duc }{Dung}
+      {Senior Fullstack Developer}
+      
+% Fake text to add separator      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \includegraphics[scale=0.15]{img/Image-50.jpg}
+  \section{Address}
+   126 Lorong 1 Toa Payoh #02-555 Singapore 310126
+ \section{Nationality}
+    Vietnam
+    ~
+  \section{Tel \& Skype}
+    +65 89219468
+    dunghd.it
+    ~
+  \section{Mail}
+    \href{mailto:dunghd.it@gmail.com}{\textbf{dunghd.it@}gmail.com}
+    ~
+  \section{Web \& Git}
+    \href{https://github.com/jellydn}{github.com/jellydn}
+    \href{https://www.linkedin.com/in/dung-huynh-duc}{linkedin.com/in/dung-huynh-duc}
+    ~
+  % use  \hspace{} or \vspace{} to change bubble size, if needed
+  \section{Programming}
+    \smartdiagram[bubble diagram]{
+        \textbf{Js/Typescript},
+        \textbf{NodeJS},
+        \textbf{ReactJS},
+        \textbf{PHP}
+    }
+    ~
+  \section{Personal Skills}
+    \smartdiagram[bubble diagram]{
+        \textbf{Problem}\\\textbf{Solving},
+        \textbf{Independence},
+        \textbf{Team}\\\textbf{Player},
+        \textbf{Time}\\\textbf{Management},
+        \textbf{\vspace{2mm}Manage\vspace{2mm}},
+        \textbf{Organize}
+    }
+    ~
+\end{aside}
+~
+I’m a full stack developer. I’m a fast learner and self-taught coder. I often take my time for researching and learning about hot and trending technology.
+~
+\section{Experience}
+\begin{entrylist}
+    \entry
+    {03/2020 - Now}
+    {Sr. Full Stack Software Engineer}
+    {AirCarbon Pte. Ltd.}
+    {Working on a carbon exchange platform in Singapore (Typescript, ReactJS)\\}
+    \entry
+    {09/2018 - 2/2020}
+    {Lead Frontend Engineer}
+    {Zenport Inc.}
+    {Working on a Logistics startup in Tokyo, Japan (JS/ReactJS)\\}
+  \entry
+    {11/2017 - 6/2018}
+    {Web Developer}
+    {Zanroo}
+    {Working on a MarTech startup in Bangkok, Thailand (NodeJS, Typescript, ReactJS)\\}
+  \entry
+    {07/2015 - 10/2017}
+    {Freelancer}
+    {Products Way/Upwork}
+    {Working on some startup projects for US, Euro and Canada clients (NodeJS, PHP)\\}
+  \entry
+    {05/2014 - 07/2015}
+    {Lead Engineer}
+    {Global Cybersoft}
+    {Team Lead, Project lead for some website projects for Japan market.\\}
+ \entry
+    {12/2012 - 03/2014}
+    {Deputy Manager}
+    {Green Global}
+    {I am in charge of a mobile team. We have 8 members include 3 Android developers and 5 iOS developers\\}
+  \entry
+    {11/2013 - 01/2014}
+    {Software Developer}
+    {GMO Internet Group (On Site)}
+    {I have a business trip to Japan when I was working for Green Global. Main duty is developing websites and iOS application for Japan customer\\} 
+   \entry
+    {8/2010 - 11/2012}
+    {Developer/Team lead}
+    {Green Global}
+    {Develop websites for Australian customer}
+  \entry
+    {11/2009 - 7/2010}
+    {Developer (Part-time)}
+    {CSSE}
+    {Develop the website with CodeIgniter Framework.}
+\end{entrylist}
+\\
+\section{Education}
+\begin{entrylist}
+  \entry
+    {2006 - 2011}
+    {Bachelor's Degree in Software Engineering}
+    {Danang University of Technology}
+    {Graduated with GPA 7.4/10\\}
+\end{entrylist}
+
+\newpage
+
+\begin{aside}
+~
+~
+~
+  \section{OS Preference}
+    \textbf{MacOS}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{GNU/Linux}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Unix}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Windows}\includegraphics[scale=0.40]{img/3stars.png}
+    ~
+  \section{Languages}
+    \textbf{Vietnamese}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{English}\includegraphics[scale=0.40]{img/4stars.png}
+    ~
+\end{aside}
+
+\section{AWARD, ACHIEVEMENT}
+\includegraphics[scale=0.40]{top-rated.png}
+\emph{\\Top rated developer on Upwork since 2016.\\}
+\emph{Promotion to be a Deputy Manager of Green Global in 2013.\\}
+\emph{Employee of year of Green Global in 2012.\\}
+\emph{Member staff of IT Club in 2011.\\}
+\emph{Leader of Soft Skill Club in 2010.\\}
+\\
+\begin{flushleft}
+\emph{July 02nd, 2024}
+\end{flushleft}
+\begin{flushright}
+\emph{Huynh Duc Dung}
+\end{flushright}
+
+\end{document}

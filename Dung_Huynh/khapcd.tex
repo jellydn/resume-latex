@@ -1,0 +1,154 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{metalogo}
+\usepackage{dtklogos}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+\hypersetup{
+    pdftitle={Pham Cao Dieu Kha's CV},
+    pdfauthor={Pham Cao Dieu Kha},
+    pdfsubject={Curriculum Vitae},
+    pdfkeywords={CV, Pham Cao Dieu Kha, Anna},
+    colorlinks=false,
+    allbordercolors=white
+}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    bubble center node size = 0.5cm,
+    bubble node size = 0.5cm,
+    distance center/other bubbles = 0.3cm,
+    distance text center bubble = 0.5cm,
+    bubble center node color = pblue,
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    bubble fill opacity = 0.6,
+    bubble text opacity = 0.5,
+}
+
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{Pham Cao Dieu}{Kha}
+
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+\begin{aside}
+  \includegraphics[scale=0.1]{img/nana.jpg}  
+  \section{Contact}
+    126 Lorong 1 Toa Payoh \#02-555
+    310126, Singapore
+    ~
+    \href{mailto:khapcd@gmail.com}{khapcd@gmail.com}
+    +65 97125884 (Anna)
+    \href{https://nanahome.info}{nanahome.info}
+  \section{Skills}
+    \textbf{System Development}\\
+    Requirements analysis, test case design, test execution, reporting, bug tracking\\
+    \textbf{Tools}\\
+    Jira, Redmine\\
+    MS Office, Visio, Photoshop, Corel Draw, Capcut, Canva\\
+    Trello\\
+    AI Tools
+\end{aside}
+
+~
+
+\section{Education}
+\begin{entrylist}
+ \entry
+    {2008 - 2012}
+    {Bachelor of Science in Information Technology \& Statistics}
+    {Da Nang University of Economics}
+    {}
+  \entry
+    {2006 - 2008}
+    {Diploma in Graphic Design}
+    {Duy Tan University}
+    {}
+\end{entrylist}
+
+\section{Professional Experience}
+\begin{entrylist}
+   \entry
+    {2017 - 2023}
+    {Freelancer}
+    {Online}
+    {I have taken on freelance work in design, photography, Vietnamese content writing, and video editing.}
+  \entry
+    {2015 - 2017}
+    {Founder/Owner}
+    {Nanahome, Vietnam}
+    {Founded and operated a business for homemade products and online shopping. Responsibilities included manufacturing, operations, sales, design, marketing, and website content creation.}
+  \entry
+    {2012 - 2015}
+    {Software Tester \& Business Analyst}
+    {Green Global, Danang City}
+    {Executed testing on websites and apps across various devices. Conducted business analysis, documentation, and gathering of customer requirements.}
+\end{entrylist}
+
+\section{Projects}
+\begin{entrylist}
+  \entry
+    {2012-2014}
+    {Software Projects}
+    {}
+    {Worked on various projects including Justlook, DNG67, Danang Travel, Invest Management, DNG13, Dating, Youlook, LYAD, and others. Responsibilities included testing, business analysis, documentation, and collecting customer requirements. These projects involved the management of investment projects, travel websites, investment management systems, project management systems, and social networking websites.
+    }
+\end{entrylist}
+
+\pagebreak
+
+\section{Projects}
+\begin{entrylist}
+  \entry
+    {2015 - 2017}
+    {Nanahome}
+    {Homemade products \& online shopping: \href{http://nanahome.info/}{nanahome.info}}
+    {
+      \textbf{Products:}
+      \includegraphics[width=0.2\textwidth]{img/qr1.png}
+      \begin{itemize}
+        \item Nanahome homemade coconut oil
+        \item Nanahome homemade gac momordica oil
+        \item Nanahome eyelash conditioner
+        \item Nanahome lip balm
+        \item Nanahome colored lip balm
+        \item Nanahome lose weight oil
+        \item Nanahome lose weight tea from lotus leaf
+        \item Nanahome nutritional cereal
+        \item Nanahome green tea skin care spray
+      \end{itemize}
+      
+      \textbf{Sales Channels:}
+      \begin{itemize}
+        \item Website: \href{https://nanahome.info}{nanahome.info}
+        \item Facebook: \href{https://www.facebook.com/nanahome}{facebook.com/nanahome}
+      \end{itemize}
+
+      \textbf{Marketing:}
+      \begin{itemize}
+        \item Design labels, product photography, website content, and Facebook content
+        \item Run ads on Facebook and Google
+        \item Create product combo and advertising campaigns
+      \end{itemize}
+    }
+\end{entrylist}
+
+\section{Hobbies}
+    My Photography Profile: \href{https://www.facebook.com/@nanahomephotography}{Time Flies Photography}\\
+    \href{https://www.facebook.com/@nanahomephotography}{facebook.com/@nanahomephotography}
+
+
+\end{document}
